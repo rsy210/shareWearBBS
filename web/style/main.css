@@ -11,11 +11,10 @@
 .left_logo{padding: 0;}
 
 
+
+
+
 /*right_login signin signup*/
-.login_register a{border-left-color: #74797e;
-    border-left-style: solid;
-    border-right-color: #48525e;
-    border-right-style: solid;}
 .right_login li {
     float: left;
     list-style-image: none;
@@ -24,11 +23,30 @@
     position: relative;
     height: 100%;
     width: 50%;
-    font:14px/35px;
 }
-.right_login ul{width: 160px;height: 80px;}
+.right_login ul{
+    width: 160px;height: 80px;
+}
+.right_login a{
+    display: block;
+height: 100%;
+    font-size: 14px;
+    text-align: center;
+    line-height: 80px;
+    color: #787D82;
+}
+
 
 
 /*search*/
 .search_box{width: 400px;padding-top: 20px;}
 .wrap input{width: 350px;height: 40px;line-height:40px\9;padding: 0 5px;background-color:#FFFFFF;}
+.border_sty{
+
+    border-width: 1px 1px 1px 1px;
+border-style: solid;
+background: #FFF none repeat scroll 0% 0%;
+display: inline-block;
+vertical-align: top;
+border-color: #000000;
+}
