@@ -1,0 +1,8 @@
+/*公用*/
+.comWidth{width: 1000px; margin-left: auto; margin-right: auto;}
+.left_logo{float: left;}
+.right_login{float: right;}
+.option{list-style:inline;}
+
+/*topBar*/
+.topBar{height: 40px; background-color: #F7F7F7; line-height: 38px; }
