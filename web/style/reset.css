@@ -9,7 +9,7 @@ a{text-decoration:none; color:#FFFFFF}
 a:hover{color: red;}
 /*清浮动*/
 .clearfix:after{content:"";*display:block;*clear:both;}
-.clearfix{zoom:1;}
+.clearfix{zoom:1;clear: both;}
 
 
 

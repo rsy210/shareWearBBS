@@ -39,10 +39,10 @@ height: 100%;
 
 
 /*search*/
+.search{height: 70px;}
 .search_box{width: 400px;padding-top: 20px;}
 .wrap input{width: 350px;height: 40px;line-height:40px\9;padding: 0 5px;background-color:#FFFFFF;}
 .border_sty{
-
     border-width: 1px 1px 1px 1px;
 border-style: solid;
 background: #FFF none repeat scroll 0% 0%;
@@ -50,3 +50,7 @@ display: inline-block;
 vertical-align: top;
 border-color: #000000;
 }
+
+
+
+/*main_page*/
