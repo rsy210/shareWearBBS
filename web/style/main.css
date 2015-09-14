@@ -53,4 +53,11 @@ border-color: #000000;
 
 
 
-/*main_page*/
+/*image_page*/
+.image_page{position: relative;}
+.image_box{height:auto;padding: 0px 15px 15px 0px;float: left;}
+.pic_style{padding: 10px;
+border :1px solid  #ccc;
+border-radius: 5px;
+box-shadow: 0 0 5px;}
+.pic_style img{width:213px;height:auto;}
