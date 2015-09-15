@@ -1,10 +1,9 @@
 window.onload=function(){
 	waterfall('image_page','image_box');
-	console.log('123');
-	var dataInt = {"data":[{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'}]}
+	var dataInt = {"data":[{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'}]};
 	window.onscroll=function(){
-		console.log(checkScrollSlide;
-		if(checkScrollSlide) {
+		var add = checkScrollSlide();
+		if(add) {
 			//数据库渲染到当前页面尾部
 			var oParent = document.getElementById('image_page');
 			for (var i = 0; i < dataInt.data.length; i++) {
@@ -27,13 +26,16 @@ function waterfall(parent,box){
 	//将parent下所有class为box元素取出
 	var oParent = document.getElementById(parent);
 	var oBoxs=getByClass(oParent,box);
+	
 }
 
 function getByClass(parent,className){
 	var boxArr = new Array(); //存储获取的c指定lass元素
 	var oElements = parent.getElementsByTagName('*');
 	for (var i = 0; i < oElements.length; i++) {
+		if(oElements[i].className == className){
 		boxArr.push(oElements[i]);
+	}
 	}
 	return boxArr;
 }
@@ -43,11 +45,15 @@ function checkScrollSlide(){
 	var oParent = document.getElementById('image_page');
 
 	var oBoxs = getByClass(oParent,'image_box');
+	console.log(oBoxs.length);
+
 
 	var lastBoxH = oBoxs[oBoxs.length-1].offsetTop + Math.floor(oBoxs[oBoxs.length-1].offsetHeight/2);
-
+console.log(lastBoxH);
 	var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
 	var height = document.body.clientHeight || document.documentElement.clientHeight; 
+console.log(scrollTop+height);
+console.log(height);
 
 	return (lastBoxH <= scrollTop+height) ? true :false;
 }
