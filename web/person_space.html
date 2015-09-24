@@ -5,7 +5,18 @@
 	<title>Document</title>
 	<link type = "text/css" rel = "stylesheet" href = "style/reset.css">
 	<link type = "text/css" rel="stylesheet" href="style/main.css">
-	<script type="text/javascript" src="jquery-2.1.4.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+   $(".person_detail_tab li").click(function(){
+        
+$(this).addClass("active").siblings().removeClass("active");//removeClass就是删除当前其他类；只有当前对象有addClass("selected")；siblings()意思就是当前对象的同级元素，removeClass就是删除； 
+$(".myContent > div").eq($(".person_detail_tab li").index(this)).addClass("current_on").siblings().removeClass("current_on"); 
+
+  })
+ })
+
+  </script>
 </head>
 <body>
 	<div class = "person_space">
@@ -44,8 +55,8 @@
         	</div>
       	</div>
 <div class="person_Publish_Collect comWidth" id="person_Publish_Collect">
-        <div class="person_detail_tab">
-          <ul>
+        <div class="person_tab">
+          <ul class="person_detail_tab">
             <li class="active">我发布的搭配<span></span></li>
             <li >我收藏的搭配<span></span></li>
           </ul>
@@ -100,7 +111,7 @@
  
 
 
-      <div class="pop_edit edit_intro">
+      <div class="pop_edit edit_intro" style="display:none;">
         <h3>编辑简介</h3><a href="#" nodetype="close" class="close">×</a>
         <div style="background: #f3f3f3; border:1px solid #DCDCDC; margin:0 10px  20px;color:#333; font-size:16px; line-height:30px; padding:0 5px;">
         	<span>用户名 : </span><span style="color: #666666;">rsylqc</span>

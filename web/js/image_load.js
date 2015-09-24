@@ -1,8 +1,7 @@
 window.onload=function(){
 	waterfall('image_page','image_box');
 	var dataInt = {"data":[{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'}]};
-	window.onscroll=function(){
-		
+	window.onscroll=function(){		
 		if(checkScrollSlide) {
 			//数据库渲染到当前页面尾部
 			var oParent = document.getElementById('image_page');
@@ -20,6 +19,13 @@ window.onload=function(){
 
 		} 
 	}
+var option=document.getElementById("option");
+var lis = option.childNodes;
+for (var i = 0; i < lis.length; i++) {
+		bgchange(lis[i]);
+};
+
+
 }
 
 function waterfall(parent,box){
@@ -61,3 +67,13 @@ console.log(scrollTop+height);
 
 	return (h <= scrollTop+height) ? true :false;
 }
+
+
+function bgchange(obj){
+         obj.onmouseover = function (){
+             obj.style.backgroundColor=' #fff';
+         }
+           obj.onmouseout = function (){
+             obj.style.backgroundColor='';
+         }
+     }
