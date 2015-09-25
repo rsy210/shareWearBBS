@@ -96,7 +96,7 @@ function autoCenter(object){
 	object.style.top = (bodyH - objH)/2 + 'px';
 
 }
-autoCenter(getId('dialog'));
+
 
 //自动全屏，遮罩全屏
 function fillToBody(object){
@@ -104,8 +104,49 @@ function fillToBody(object){
 	object.style.height=document.documentElement.clientHeight+ 'px';
 }
 
+//鼠标拖动
+var mouseOffsetX=0; //偏移
+var mouseOffsetY=0;
+
+var isDraging = false; //是否可拖拽标记
+
+//鼠标事件1 按下相对拖拽元素左上角坐标
+var s= getId('dialog');
+console.log(getId('dialog'));
+getId('dialog').addEventListener('mousedown',function(e){
+	var e = e || window.event;
+	mouseOffsetX = e.pageX - getId('dialog').offsetLeft;  
+	mouseOffsetY = e.pageY - getId('dialog').offsetTop;
+	isDraging = true;
+})
+//鼠标事件2，移动 元素位置鼠标当前位置-相对拖拽元素位置
+document.onmousemove = function(){
+	var e = e || window.event;
+
+	var mouseX = e.pageX;//鼠标当前位置
+	var mouseY = e.pageY;
+
+	var moveX = 0;  //元素新位置 
+	var moveY = 0;
+
+	if (isDraging === true) {
+		moveX = mouseX - mouseOffsetX;
+		moveY = mouseY - mouseOffsetY;
+
+		//限定可移动范围，move > 0 且 move < 页面宽高-浮层元素宽高
+
+		getId('dialog').style.left = moveX + 'px';
+		getId('dialog').style.top = moveY + 'px';
+	}
+}
+//鼠标事件3，松开不可拖动
+document.onmouseup = function(){
+	isDraging = false;
+}
+
 function showDialog(){
 getId('dialog').style.display='block';
+console.log(getId('dialog'));
 getId('mask').style.display='block';
 autoCenter(getId('dialog'));
 fillToBody(getId('dialog'));
