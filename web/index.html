@@ -18,7 +18,7 @@
 				<div class="right_login rf">
 					<ul class="option" id="option">			
 					<li class="signin">
-						<a href="#">登&nbsp;陆</a></li>
+						<a href="javascript:showDialog();">登&nbsp;陆</a></li>
 					<li class="signup">
 					    <a href="#">注&nbsp;册</a></li>
 				    </ul>
@@ -123,5 +123,33 @@
 	</div>
 		<div clsaa="footer"></div>
     </div>
+
+
+<div class="signin_dialog" id="dialog">
+	<div class="signin_dialog_title" id="dialog_title">登陆
+		<a class="signin_dialog_closebutton" href="javascript:;"></a>
+		
+	</div>
+	<div class="signin_dialog_content">
+		<div class="">
+			<input type="text" value="请输入登陆账号" class="signin_dialog_input signin_dialog_input_username">
+		</div>
+		<div class="">
+			<input type="text" value="请输入账户密码" class="signin_dialog_input signin_dialog_input_password">
+		</div>
+		<div class="">
+			<input type="button" value="登陆" class="signin_dialog_submit">
+		</div>
+	</div>
+</div>
+<div class="sign_mask" id="mask" onslectstart="return false"></div>
+
+
+
+
+
+
+
+
 </body>
 </html>

@@ -39,6 +39,24 @@ height: 100%;
 }
 .right_login a:hover{color: #000; font-size: 18px;}
 
+/*点击登陆弹出框*/
+.signin_dialog{
+    width: 380px !important;height: auto !important;display: none;
+        position: absolute;z-index: 9000;
+        top: 0px;left: 0px;
+        border: 1px solid #D5D5D5;background: #fff;}
+.signin_dialog_title{height: 48px;line-height: 48px;font:16px #535353;text-align: center;
+background: #f5f5f5;border-bottom: 1px solid #efefef;
+cursor: move;}
+.signin_dialog_closebutton{width: 16px;height: 16px;display: block;position: absolute;
+top: 12px;right: 20px;background: url(../images/close_def.jpg);}
+.signin_dialog_closebutton:hover{background: url(../images/close_hov.jpg);}
+.signin_dialog_content{padding: 15px 20px;}
+
+.sign_mask{
+    width: 100%;height: 100%;background: #000;opacity: 0.4;filter:Alpha(opacity=40);/*ie6*/
+    position: absolute;;top: 0px;left: 0px;z-index: 8000;display: none;
+}
 
 
 /*///////////////////////////////////////////////////////////////*/
@@ -52,7 +70,7 @@ height: 100%;
     border-width: 1px 1px 1px 1px;
 border-style: solid;
 background: #FFF none repeat scroll 0% 0%;
-display: inline-block;
+display: inline-block; 
 vertical-align: top;
 border-color: #000000;
 }
