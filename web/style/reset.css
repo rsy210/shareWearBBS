@@ -1,5 +1,5 @@
 body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,input,select,textarea,form{margin: 0; padding: 0;}
-html,body{font:14px/1.5 "宋体";height:100%;}
+html,body{font:14px/1.5 "宋体";height:100%;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;-khtml-user-select: none;user-select: none;}
 img{border:none;}
 ul,ol{list-style:none;}
 input,select,textarea{outline:none;border:none;background:none;}
