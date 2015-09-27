@@ -1,7 +1,7 @@
 window.onload=function(){
 	waterfall('image_page','image_box');
 	var dataInt = {"data":[{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'},{"src":'1.jpg'}]};
-/*	window.onscroll=function(){		
+	window.onscroll=function(){		
 		if(checkScrollSlide) {
 			//数据库渲染到当前页面尾部
 			var oParent = document.getElementById('image_page');
@@ -18,7 +18,7 @@ window.onload=function(){
 			}
 
 		} 
-	}*/
+	}
 var option=document.getElementById("option");
 var lis = option.childNodes;
 for (var i = 0; i < lis.length; i++) {
@@ -106,16 +106,15 @@ function fillToBody(object){
 
 
 //显示隐藏登录界面
-function showDialog(){
-getId('dialog').style.display='block';
-console.log(getId('dialog'));
+function showDialog(id){
+getId(id).style.display='block';
 getId('mask').style.display='block';
-autoCenter(getId('dialog'));
+autoCenter(getId(id));
 fillToBody(getId('mask'));
-mouseDrag();
+mouseDrag(id);
 }
-function hideDialog(){
-getId('dialog').style.display='none';
+function hideDialog(id){
+getId(id).style.display='none';
 getId('mask').style.display='none';
 }
 
@@ -128,18 +127,17 @@ var isDraging = false;
 var mouseOffsetX=0; //偏移
 var mouseOffsetY=0;
 //鼠标拖动
-function mouseDrag(){
+function mouseDrag(id){
 
 
  //是否可拖拽标记
 
 //鼠标事件1 按下相对拖拽元素左上角坐标
-var s= getId('dialog');
-console.log(getId('dialog'));
-getId('dialog_title').addEventListener('mousedown',function(e){
+
+getId(id+'_title').addEventListener('mousedown',function(e){
 	var e = e || window.event;
-	mouseOffsetX = e.pageX - getId('dialog').offsetLeft;  
-	mouseOffsetY = e.pageY - getId('dialog').offsetTop;
+	mouseOffsetX = e.pageX - getId(id).offsetLeft;  
+	mouseOffsetY = e.pageY - getId(id).offsetTop;
 	isDraging = true;
 })
 //鼠标事件2，移动 元素位置鼠标当前位置-相对拖拽元素位置
@@ -154,8 +152,15 @@ document.onmousemove = function(e){
 
 	var moveX = 0;  //元素新位置 
 	var moveY = 0;
+	if (getId('up_dialog').style.display === "block") {
+		id = 'up_dialog';
 
-	if (isDraging === true) {
+	}else if(getId('in_dialog').style.display === "block"){
+		id = 'in_dialog';
+
+	}
+
+	if (isDraging === true ) {
 		moveX = mouseX - mouseOffsetX;
 		moveY = mouseY - mouseOffsetY;
 
@@ -163,8 +168,9 @@ document.onmousemove = function(e){
 		var pageWidth = document.documentElement.clientWidth;
 		var pageHeight = document.documentElement.clientHeight;
 
-		var dialogWidth = getId('dialog').offsetWidth;
-		var dialogHeight = getId('dialog').offsetHeight;
+
+		var dialogWidth = getId(id).offsetWidth;
+		var dialogHeight = getId(id).offsetHeight;
 
 		var maxX = pageWidth - dialogWidth;
 		var maxY = pageHeight - dialogHeight;
@@ -172,8 +178,8 @@ document.onmousemove = function(e){
 		moveX = Math.min( maxX,Math.max(0,moveX));
 		moveY = Math.min( maxY,Math.max(0,moveY));
 
-		getId('dialog').style.left = moveX + 'px';
-		getId('dialog').style.top = moveY + 'px';
+		getId(id).style.left = moveX + 'px';
+		getId(id).style.top = moveY + 'px';
 	}
 }
 //鼠标事件3，松开不可拖动
@@ -182,6 +188,7 @@ document.onmouseup = function(){
 }
 
 window.onresize = function(){
-	autoCenter(getId('dialog'));
+	autoCenter(getId('up_dialog'));
+	autoCenter(getId('in_dialog'));
 fillToBody(getId('mask'));
 }

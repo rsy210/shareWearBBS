@@ -40,29 +40,28 @@ height: 100%;
 .right_login a:hover{color: #000; font-size: 18px;}
 
 /*点击登陆弹出框*/
-.signin_dialog{
+.signin_dialog,.signup_dialog{
     width: 350px !important;height: auto !important;display: none;
         position: fixed;z-index: 9000;
         top: 0px;left: 0px;
         border: 1px solid #D5D5D5;background: #fff;}
-.signin_dialog_title{height: 45px;font-size: 16px;color:#666;line-height: 48px;
+.signin_dialog_title,.signup_dialog_title{height: 45px;font-size: 16px;color:#666;line-height: 48px;
 background: #f5f5f5;border-bottom: 1px solid #efefef;
 cursor: move;user-select:none !important;}
-.signin_dialog_title .login_title,.regist_title{height:100%;width:150px;display: block;
-overflow: hidden;
-text-overflow: ellipsis;text-align: center;float: left;}
-.signin_dialog_closebutton{width: 16px;height: 16px;display: block;position: absolute;
+.signin_dialog_title .signin_title,.signup_dialog_title .signup_title{height:100%;;display: block;
+overflow: hidden;text-overflow: ellipsis;text-align: center;}
+.signin_dialog_closebutton,.signiup_dialog_closebutton{width: 16px;height: 16px;display: block;position: absolute;
 top: 12px;right: 20px;background: url(../images/close_def.jpg);}
-.signin_dialog_closebutton:hover{background: url(../images/close_hov.jpg);}
-.signin_dialog_content{padding: 15px 20px;}
-.signin_dialog_input{width: 100%;height: 48px;border:1px solid #d5d5d5;margin-top: 15px;line-height: 48px;}
-.signin_dialog_input_username{padding:0px 5px;}
-.signin_dialog_input_password{padding:0px 5px;}
-.about_member_password{padding: 10px 0px;}
-.forget_password{color: #000;}
-.signin_dialog_subbox{margin-top: 20px;}
-.signin_dialog_submit{width: 100%;height: 48px;line-height: 48px;font-size: 16px;text-align: center;background:#F01400;color: #fff;}
+.signin_dialog_closebutton:hover,.signiup_dialog_closebutton:hover{background: url(../images/close_hov.jpg);}
+.signin_dialog_content,.signup_dialog_content{padding: 15px 20px;}
+.signin_dialog_input,.signup_dialog_input{width: 100%;border:1px solid #d5d5d5;margin-top: 15px;line-height: 40px;}
+.sign_dialog_input_username,.sign_dialog_input_password,.signup_dialog_input_nickname{width: 300px;height: 40px;padding:1px 5px;}
 
+.about_member_password{padding-top: 10px;}
+.forget_password{color: #F01400;}
+.no_account_number{color: #F01400;padding-top: 5px;}
+.signin_dialog_subbox,.signup_dialog_subbox{margin: 20px 0px;}
+.signin_dialog_submit,.signup_dialog_submit{width: 100%;height: 48px;line-height: 48px;font-size: 16px;text-align: center;background:#F01400;color: #fff;}
 .sign_mask{
     width: 100%;height: 100%;background: #000;opacity: 0.4;filter:Alpha(opacity=40);/*ie6*/
     position: fixed;;top: 0px;left: 0px;z-index: 8000;display: none;
