@@ -58,8 +58,9 @@ top: 12px;right: 20px;background: url(../images/close_def.jpg);}
 .sign_dialog_input_username,.sign_dialog_input_password,.signup_dialog_input_nickname{width: 300px;height: 40px;padding:1px 5px;}
 
 .about_member_password{padding-top: 10px;}
-.forget_password{color: #F01400;}
-.no_account_number{color: #F01400;padding-top: 5px;}
+.forget_password{color: #900b09;}
+.no_account_number{color: #900b09;padding-top: 5px;}
+.forget_password:hover,.no_account_number:hover{text-decoration:underline;}
 .signin_dialog_subbox,.signup_dialog_subbox{margin: 20px 0px;}
 .signin_dialog_submit,.signup_dialog_submit{width: 100%;height: 48px;line-height: 48px;font-size: 16px;text-align: center;background:#F01400;color: #fff;}
 .sign_mask{
@@ -89,10 +90,7 @@ border-color: #000000;
 /*image_page*/
 .image_page{position: relative;display: block;margin: 40px 0px 0px 0px;}
 .image_box{height:auto;padding: 0px 15px 15px 0px;float: left;}
-.pic_style{padding: 10px;
-border :1px solid  #ccc;
-border-radius: 5px;
-box-shadow: 0 0 5px;}
+.pic_style{padding: 10px;}
 .pic_style img{width:213px;height:auto;}
 
 
@@ -122,22 +120,24 @@ box-shadow: 0 0 5px;}
 
 /*///////////////////////////////////////////////////////////////*/
 /*个人空间person_space*/
-
+.persional_main{background-color: #000;}
 /*个人信息介绍部分*/
-.persional_property{background-color: #ccc;}
+.persional_property{background-color: #000;}
 /*头像粉丝关注*/
+.person_info_con{border-top:1px solid #999;}
 .person-photo{width :150px;height: 250px;}
 .person-photo img{width :150px;height: 200px;}
-.person-photo .focus_num{width :74px;height: 25px;float: left;text-align: center;border-right: 1px solid #f0f0f0;}
-.person-photo .fans_num{width :74px;height: 25px;float: left;text-align: center;}
+.person-photo .focus_num{width :74px;height: 25px;float: left;text-align: center;border-right: 1px solid #f0f0f0;color: #fff;}
+.person-photo .fans_num{width :74px;height: 25px;float: left;text-align: center;color: #fff;}
 .focus_num b a{
 text-decoration: none;
-color: #5A5656;
+color: #fff;
 }
 .fans_num b a{
 text-decoration: none;
-color: #5A5656;
+color: #fff;
 }
+.person-photo a:hover{text-decoration:underline;color: red;}
 /*个人信息*/
 .persional_property .person-info{width :820px;margin: 25px 0px 0px 30px;}
 .persional_property .person-info dt {
@@ -149,14 +149,14 @@ overflow: hidden;
 display: block;
 float: left;
 font-size: 24px;
-color: #333;
+color: #fff;
 font-weight: normal;}
 
 /*性别等个人信息*/
 .person-info  .person-detail {
 overflow: hidden;
 font-size: 16px;
-color: #333;
+color: #fff;
 margin-top: 10px;
 }
 
@@ -169,7 +169,7 @@ padding: 0 15px;
 .person-info .person-sign {
 overflow: hidden;
 font-size: 14px;
-color: #999;
+color: #fff;
 border-top: 1px solid #f0f0f0;
 padding-top: 8px;
 margin-top: 10px;
@@ -187,17 +187,20 @@ margin: 0 auto;
 }
 
 .person_Publish_Collect .person_detail_tab li {
-width: 500px;
+width: 498px;
 line-height: 48px;
 float: left;
+color: #fff;
 text-align: center;
 font-size: 16px;
-background: #eee;
+background: #000;
 margin: 0px;
 padding: 0px;
 cursor: pointer;
+border: 1px solid #666;
 }
-.person_Publish_Collect .person_detail_tab .active{background: #fff;border-top: 1px solid #aaccff;}
+.person_Publish_Collect .person_detail_tab .active{background: #fff;color:#000;border: 1px solid #666;border-bottom:none;}
 /*发布与收藏目录*/
+.myContent{background-color: #fff;}
 .person_Publish_Collect .myContent .current_on{display: block;}
 .person_Publish_Collect .myContent > div {display: none;}
