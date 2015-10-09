@@ -70,7 +70,7 @@ top: 12px;right: 20px;background: url(../images/close_def.jpg);}
 
 
 /*///////////////////////////////////////////////////////////////*/
-/*index*/
+/*index主页*/
 /*main_page*/
 /*search*/
 .search{height: 70px;}
@@ -94,6 +94,9 @@ border-color: #000000;
 .pic_style img{width:213px;height:auto;}
 
 
+
+
+
 /*///////////////////////////////////////////////////////////////*/
 /*帖子详情details*/  
 /*detail_page*/
@@ -110,6 +113,40 @@ border-color: #000000;
     float: right;
     position: relative;
     }
+
+
+/*///////////////////////////////////////////////////////////////*/
+/*发布帖子publish*/  
+/*publish_page*/
+/*image_page*/
+.add_image_description{position: relative;display: block;margin: 40px 0px 0px 0px;}
+.add_coverimage_list,.add_image_list{height:100%;padding: 0px 15px 15px 0px;}
+.add_coverimage_list img,.add_image_list img{width:213px;height:auto;}
+.add_picture_style{
+    float: left;}
+.add_picture_descrip{
+    width:700px;
+    float: left;
+    position: relative;
+    border:1px solid #000;
+    margin-left: 10px;
+    }
+.add_coverimage_list .add_picture_descrip{
+    height: auto;
+    }
+.add_image_list .add_picture_descrip{
+    height: 100px;
+    }
+.add_coverimage_list .add_picture_descrip textarea{
+    width: 690px;
+    height: 15px;
+    padding: 5px;
+}
+.add_image_list .add_picture_descrip textarea{
+    width: 690px;
+    height: 90px;
+    padding: 5px;
+}
 
 
 
