@@ -1,3 +1,47 @@
+var innerH = '<div class="signin_dialog" id="in_dialog" >'
+		innerH+='<div class="signin_dialog_title" id="in_dialog_title"><span class="signin_title"><h3>登&nbsp;陆</h3></span><a class="signin_dialog_closebutton" href="javascript:hideDialog(\'in_dialog\');"></a></div>'
+	innerH+='<div class="sign_layer"><form class="signin_layer"><div class="signin_dialog_content">'
+		innerH+='<div class="signin_dialog_input"><input type="text" placeholder="请输入登陆账号" class="sign_dialog_input_username"></div>'
+		innerH+='<div class="signin_dialog_input"><input type="password" placeholder="请输入账户密码" class="sign_dialog_input_password"></div>'
+		innerH+='<div class="about_member_password">'
+			innerH+='<input class="member_password" id="member_password" type="checkbox" value="member_password" checked="checked">'
+			innerH+='<label class="member_passwordlabel" id="member_passwordlabel" for="member_Password">下次自动登录</label>'
+			innerH+='<a class="forget_password rf" id="forget_password" href="#" target="_blank">忘记密码？</a>'
+		innerH+='</div>'
+		innerH+='<div class="signin_dialog_subbox">'
+			innerH+='<input type="button" value="确认登陆" class="signin_dialog_submit">'
+			innerH+='<div class="no_account clearfix"><a class="no_account_number rf" id="no_account_number" href="javascript:hideDialog(\'in_dialog\');showDialog(\'up_dialog\');">无账号注册</a></div>'
+		innerH+='</div>'
+	innerH+= '</div></form></div>'
+innerH+='</div>'
+
+innerH+='<div class="signup_dialog" id="up_dialog" >'
+	innerH+='<div class="signup_dialog_title" id="up_dialog_title"><span class="signup_title"><h3>注&nbsp;册</h3></span><a class="signiup_dialog_closebutton" href="javascript:hideDialog(\'up_dialog\');"></a></div>'
+	innerH+='<div class="sign_layer"><form class="signup_layer"><div class="signup_dialog_content">'
+		innerH+='<div class="signup_dialog_input"><input type="text" placeholder="请输入注册邮箱" class="sign_dialog_input_username"></div>'
+		innerH+='<div class="signup_dialog_input"><input type="password" placeholder="请输入密码（6-16位,区分大小写,不可用空格）" class="sign_dialog_input_password"></div>'
+		innerH+='<div class="signup_dialog_input"><input type="text" placeholder="请输入昵称" class="signup_dialog_input_nickname"></div>'
+		innerH+='<div class="signup_dialog_subbox"><input type="button" value="确认注册" class="signup_dialog_submit"></div>'
+	innerH+='</div></form></div>'
+innerH+='</div>'
+
+innerH+='<div class="sign_mask" id="mask" onslectstart="return false"></div>'
+
+
+var bodyE = document.body;
+var login_view_page = document.createElement("div");
+/*var lodin_node = document.createTextNode(innerH);
+login_view_page.appendChild(lodin_node);*/
+bodyE.appendChild(login_view_page);
+login_view_page.id='login_view_page';
+document.getElementById('login_view_page').innerHTML=innerH;
+
+
+
+
+
+
+
 var option=document.getElementById("option");
 var lis = option.childNodes;
 for (var i = 0; i < lis.length; i++) {
