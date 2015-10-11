@@ -9,7 +9,7 @@ window.onload=function(){
 				var oBox = document.createElement('div');
 				oBox.className='image_box';
 				oParent.appendChild(oBox);
-				var oPic = document.createElement('div');
+				var oPic = document.createElement('a');
 				oPic.className='pic_style';
 				oBox.appendChild(oPic);
 				var oImg = document.createElement('img');
