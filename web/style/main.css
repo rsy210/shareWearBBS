@@ -90,10 +90,12 @@ border-color: #000000;
 /*image_page*/
 .image_page{position: relative;display: block;margin: 40px 0px 0px 0px;}
 .image_box{height:auto;padding: 0px 15px 15px 0px;float: left;}
-.pic_style{padding: 10px;}
+.pic_style{position:relative;padding: 10px;}
 .pic_style img{width:213px;height:auto;}
-.pic_style:hover img{border:1px solid #000;}
-.pic_style .like{background: url(../images/like.png);}
+.pic_style .like,.pic_style .collect{width: 50%;}
+.pic_style span{height: 15px;position: absolute;z-index: 100;bottom: 20px;line-height: 20px;}
+.pic_style .like_num{background: url(../images/like.png) no-repeat 1px;padding-left: 20px}
+.pic_style .collect_num{background: url(../images/like.png) no-repeat 1px;left:137px;padding-left: 20px}
 
 
 
